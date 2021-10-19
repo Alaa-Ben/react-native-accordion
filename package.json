@@ -76,7 +76,7 @@
   "peerDependencies": {
     "react": "*",
     "react-native": "*",
-    "react-native-reanimated": "2.1.0"
+    "react-native-reanimated": "*"
   },
   "jest": {
     "preset": "react-native",
