@@ -12,6 +12,7 @@ import {
   TouchableWithoutFeedback,
   View,
   ViewStyle,
+  StyleProp
 } from 'react-native';
 import Animated, {
   useSharedValue,
@@ -115,7 +116,7 @@ export default forwardRef((props: IAccordionProps, ref: Ref<any>) => {
       : withTiming(0, configCollapsed, unmount)
   );
 
-  const style = useAnimatedStyle<Animated.AnimatedStyleProp<ViewStyle>>(() => ({
+  const style = useAnimatedStyle(() => ({
     height: size.value * progress.value + 1,
     opacity: progress.value === 0 ? 0 : 1,
   }));
