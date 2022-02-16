@@ -11,8 +11,7 @@ import {
   ActivityIndicator,
   TouchableWithoutFeedback,
   View,
-  ViewStyle,
-  StyleProp
+  ViewStyle
 } from 'react-native';
 import Animated, {
   useSharedValue,
@@ -219,9 +218,7 @@ export default forwardRef((props: IAccordionProps, ref: Ref<any>) => {
     () => [styles.container, styleContainer],
     [styleContainer]
   );
-  const containerAnimatedStyle = useMemo<
-    Animated.AnimatedStyleProp<ViewStyle>[]
-  >(() => [styles.content, style], [style]);
+  const containerAnimatedStyle = useMemo(() => [styles.content, style], [style]);
 
   return (
     <>
